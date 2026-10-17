@@ -81,7 +81,7 @@ Once installed, you can control your CS Bridge Bot using the following commands:
 
  Command | Description | Example |
 | :--- | :--- | :--- |
-| `neemo start` | Starts the bot in the background via PM2 with live auto-reload & ASCII banner. | `neemo start` |
+| `neemo start` | Starts the bot in the background via PM2 with live auto-reload. | `neemo start` |
 | `neemo stop` | Stops and terminates the background Neemo bot process. | `neemo stop` |
 | `neemo status` | Checks the live running status and process information of the bot. | `neemo status` |
 | `neemo add` | Adds a new Telegram ID to the admin/CS authorization list. | `neemo add -u 123456789` |

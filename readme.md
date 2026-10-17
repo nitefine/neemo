@@ -1,6 +1,7 @@
 # 🤖 Neemo CLI
 
 ### **Professional Telegram CS Bridge Bot & Management CLI**
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)  [![npm version](https://img.shields.io/npm/v/@ciiixid/neemo.svg?style=flat-square&color=blue)](https://www.npmjs.com/package/@ciiixid/neemo)  [![Telegram Bot API](https://img.shields.io/badge/Telegram-2CA5E0?style=flat-square&logo=telegram&logoColor=white)](https://core.telegram.org/bots/api)
 
 *A robust, lightning-fast, and secure CLI tool designed to manage your Telegram Customer Service (CS) Bridge Bot with bidirectional quoting, live auto-reloading daemon processes, and seamless environment configuration.*
 

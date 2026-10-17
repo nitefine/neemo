@@ -1,6 +1,6 @@
 {
   "name": "@ciiixid/neemo",
-  "version": "1.1.0",
+  "version": "22.0.0",
   "description": "CLI-based Telegram CS & Admin Bridge",
   "bin": {
     "neemo": "bin/cli.js"

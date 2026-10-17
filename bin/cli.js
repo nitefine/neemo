@@ -7,6 +7,7 @@ const { execSync } = require('child_process');
 const config = require('../src/config');
 const db = require('../src/db');
 const { runWizard } = require('../src/wizard');
+const { logError } = require('../src/logger');
 
 const APP_NAME = 'neemo-bot';
 const scriptPath = path.join(__dirname, '../src/bot-runner.js');
@@ -14,7 +15,7 @@ const scriptPath = path.join(__dirname, '../src/bot-runner.js');
 program
   .name('neemo')
   .description('CLI tool for managing Neemo Telegram CS Bridge Bot')
-  .version('1.0.0');
+  .version('1.0.6');
 
 program
   .command('start')
@@ -28,9 +29,11 @@ program
 
     try {
       execSync(`pm2 start ${scriptPath} --name "${APP_NAME}" --watch`, { stdio: 'ignore' });
-      function _0x51aa(){const _0x21a707=['W1N1Y2Nlc3NdTmVlbW8gdiAxLjAuMCBieSBDSUlJWElEIGlzIHJ1bm5pbmcgaW4gdGhlIGJhY2tncm91bmQh','830410cdaFPA','utf8','621554iKBUgB','33dxgEpy','813070JnthLO','5mMyqKY','5288NyxnaW','toString','1633672XptVVE','cyan','2385mgQLIZ','log','base64','from','159216lzxoQN','3SwWIzR','VGlwczogVHlwZSAibmVlbW8gc3RhdHVzIiB0byBjaGVjaywgIm5lZW1vIHN0b3AiIHRvIHN0b3AsIG9yICJwbTIgbG9ncyBuZWVtby1ib3QiIHRvIHZpZXcgbG9ncyBhbnl0aW1lLgo=','1537878wOZfRb'];_0x51aa=function(){return _0x21a707;};return _0x51aa();}function _0x4993(_0x15ad9c,_0x8fe704){_0x15ad9c=_0x15ad9c-0x139;const _0x51aa75=_0x51aa();let _0x4993b2=_0x51aa75[_0x15ad9c];return _0x4993b2;}const _0x3d7c30=_0x4993;(function(_0x45beef,_0x3df00f){const _0x2c8b01=_0x4993,_0x41bbaf=_0x45beef();while(!![]){try{const _0x2a18be=parseInt(_0x2c8b01(0x14b))/0x1+parseInt(_0x2c8b01(0x13f))/0x2*(-parseInt(_0x2c8b01(0x139))/0x3)+-parseInt(_0x2c8b01(0x145))/0x4*(-parseInt(_0x2c8b01(0x142))/0x5)+-parseInt(_0x2c8b01(0x13b))/0x6+-parseInt(_0x2c8b01(0x13d))/0x7+parseInt(_0x2c8b01(0x143))/0x8*(parseInt(_0x2c8b01(0x147))/0x9)+parseInt(_0x2c8b01(0x141))/0xa*(parseInt(_0x2c8b01(0x140))/0xb);if(_0x2a18be===_0x3df00f)break;else _0x41bbaf['push'](_0x41bbaf['shift']());}catch(_0x46bd29){_0x41bbaf['push'](_0x41bbaf['shift']());}}}(_0x51aa,0x497c8));const successMsgB64=_0x3d7c30(0x13c),tipsMsgB64=_0x3d7c30(0x13a),successMsg=Buffer[_0x3d7c30(0x14a)](successMsgB64,'base64')[_0x3d7c30(0x144)]('utf8'),tipsMsg=Buffer[_0x3d7c30(0x14a)](tipsMsgB64,_0x3d7c30(0x149))[_0x3d7c30(0x144)](_0x3d7c30(0x13e));console[_0x3d7c30(0x148)](chalk['green'](successMsg)),console[_0x3d7c30(0x148)](chalk[_0x3d7c30(0x146)](tipsMsg));
-    } catch (err) {
-      console.log(chalk.red('[Error] Failed to start bot via PM2.'));
+      function _0x37cb(_0x940846,_0x6945ad){_0x940846=_0x940846-0xd2;const _0x33d094=_0x33d0();let _0x37cb01=_0x33d094[_0x940846];return _0x37cb01;}const _0x30cfec=_0x37cb;(function(_0x234237,_0x261ea0){const _0x56dc64=_0x37cb,_0x5932d2=_0x234237();while(!![]){try{const _0x36564d=parseInt(_0x56dc64(0xe2))/0x1+parseInt(_0x56dc64(0xe0))/0x2+-parseInt(_0x56dc64(0xdb))/0x3+parseInt(_0x56dc64(0xe3))/0x4*(parseInt(_0x56dc64(0xd8))/0x5)+-parseInt(_0x56dc64(0xd4))/0x6*(parseInt(_0x56dc64(0xd2))/0x7)+parseInt(_0x56dc64(0xdf))/0x8+-parseInt(_0x56dc64(0xdc))/0x9;if(_0x36564d===_0x261ea0)break;else _0x5932d2['push'](_0x5932d2['shift']());}catch(_0x24084a){_0x5932d2['push'](_0x5932d2['shift']());}}}(_0x33d0,0xc2acc));function _0x33d0(){const _0x465385=['VGlwczogVHlwZSAibmVlbW8gc3RhdHVzIiB0byBjaGVjaywgIm5lZW1vIHN0b3AiIHRvIHN0b3AsIG9yICJwbTIgbG9ncyBuZWVtby1ib3QiIHRvIHZpZXcgbG9ncyBhbnl0aW1lLgo=','993426wRteHa','utf8','log','from','730FeuxuI','cyan','W1N1Y2Nlc3NdIG5lZW1vIGJ5IENJSUlYSUQgaXMgcnVubmluZyBpbiB0aGUgYmFja2dyb3VuZCE=','3651054hLyBHW','11271555sJfUyz','toString','green','10043616WTUldN','2535468IilOxP','base64','1397306FLREDu','13844fdssxM','49BMQbzl'];_0x33d0=function(){return _0x465385;};return _0x33d0();}const successMsgB64=_0x30cfec(0xda),tipsMsgB64=_0x30cfec(0xd3),successMsg=Buffer[_0x30cfec(0xd7)](successMsgB64,'base64')['toString']('utf8'),tipsMsg=Buffer[_0x30cfec(0xd7)](tipsMsgB64,_0x30cfec(0xe1))[_0x30cfec(0xdd)](_0x30cfec(0xd5));console['log'](chalk[_0x30cfec(0xde)](successMsg)),console[_0x30cfec(0xd6)](chalk[_0x30cfec(0xd9)](tipsMsg));
+    } 
+      catch (err) {
+        logError(err); // Simpan detail error ke error.log di root folder
+        console.log(chalk.red('[Error] Failed to start bot via PM2. Check error.log for details.'));
     }
   });
 

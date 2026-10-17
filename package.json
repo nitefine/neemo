@@ -1,9 +1,9 @@
 {
-  "name": "neemo",
-  "version": "1.0.0",
+  "name": "@ciiixid/neemo",
+  "version": "1.0.5",
   "description": "CLI-based Telegram CS & Admin Bridge",
   "bin": {
-    "neemo": "./bin/cli.js"
+    "neemo": "bin/cli.js"
   },
   "preferGlobal": true,
   "engines": {

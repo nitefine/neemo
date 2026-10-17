@@ -1,0 +1,27 @@
+{
+  "name": "neemo",
+  "version": "1.0.0",
+  "description": "CLI-based Telegram CS & Admin Bridge",
+  "bin": {
+    "neemo": "./bin/cli.js"
+  },
+  "preferGlobal": true,
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "conf": "^10.2.0",
+    "inquirer": "^8.2.6",
+    "telegraf": "^4.12.2"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "cs",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT"
+}
